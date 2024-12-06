@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Question Paper Generator</h1>
+        <form id="questionForm">
+            <label for="subject">Select Subject:</label>
+            <select id="subject" name="subject" onchange="updateTopics()">
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+            </select>
+            <br><br>
+            
+            <label for="topic">Select Topic:</label>
+            <select id="topic" name="topic">
+                <!-- Topics will be dynamically updated -->
+            </select>
+            <br><br>
+            
+            <label for="difficulty">Select Difficulty Level:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <br><br>
+            
+            <button type="button" onclick="generatePaper()">Generate Question Paper</button>
+        </form>
+        
+        <div id="questionPaper">
+            <h2>Generated Question Paper:</h2>
+            <ul id="questionsList"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
